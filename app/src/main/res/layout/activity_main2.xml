@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="@color/white_100">
+
+
+    <ImageView
+        android:id="@+id/signup_pg_signup_png"
+        android:layout_width="383dp"
+        android:layout_height="605dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:background="@drawable/signup_pg_signup_txt_panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.793"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/signup_pg_login_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fun_signup_pg_login_txt"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/signup_pg_signup_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:textColor="@color/black"
+        android:textSize="55dp"
+        android:textStyle="bold"
+        android:onClick="fun_signup_pg_signup_txt"
+        app:layout_constraintBottom_toTopOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="@id/signup_pg_signup_png"
+        app:layout_constraintTop_toTopOf="@id/signup_pg_signup_png"
+        app:layout_constraintVertical_bias="0.779"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/signup_pg_signup_panel"
+        android:layout_width="341dp"
+        android:layout_height="492dp"
+        android:background="@drawable/panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/signup_pg_firstname_panel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/login_signup_ed_text_des"
+        android:gravity="center"
+        android:hint="First name"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintStart_toStartOf="@id/signup_pg_signup_panel"
+        app:layout_constraintTop_toTopOf="@id/signup_pg_signup_panel" />
+
+    <EditText
+        android:id="@+id/signup_pg_lastname_panel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/login_signup_ed_text_des"
+        android:gravity="center"
+        android:hint="Last name "
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/signup_pg_email_panel"
+        app:layout_constraintEnd_toEndOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/signup_pg_firstname_panel"
+        app:layout_constraintTop_toTopOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintVertical_bias="0.845" />
+
+    <EditText
+        android:id="@+id/signup_pg_email_panel"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:drawableLeft="@drawable/account_icon"
+        android:drawableStart="@drawable/account_icon"
+        android:background="@drawable/login_signup_ed_text_des"
+        android:paddingLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintTop_toBottomOf="@+id/signup_pg_firstname_panel"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/signup_pg_pass_panel"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:drawableStart="@drawable/lock_icon"
+        android:drawableLeft="@drawable/lock_icon"
+        android:background="@drawable/login_signup_ed_text_des"
+        android:paddingLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintTop_toBottomOf="@+id/signup_pg_email_panel"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/signup_pg_pass_conf_panel"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:hint="Confirm password"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/lock_icon"
+        android:drawableStart="@drawable/lock_icon"
+        android:background="@drawable/login_signup_ed_text_des"
+        android:paddingLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintTop_toBottomOf="@+id/signup_pg_pass_panel"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/signup_pg_phone_panel"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:hint="Phone number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:inputType="number"
+        android:drawableStart="@drawable/phone_icon"
+        android:drawableLeft="@drawable/phone_icon"
+        android:background="@drawable/login_signup_ed_text_des"
+        android:paddingLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintTop_toBottomOf="@+id/signup_pg_pass_conf_panel"
+        app:layout_constraintVertical_bias="0.04" />
+
+
+    <RadioGroup
+        android:id="@+id/signup_pg_radio_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="@id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@id/signup_pg_signup_panel"
+        app:layout_constraintTop_toBottomOf="@id/signup_pg_phone_panel"
+        app:layout_constraintVertical_bias="0.03"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/signup_pg_radio_btn_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender: "
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/signup_pg_radio_btn_radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Male"
+            android:textColor="@color/black"
+            android:paddingRight="10dp"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="486dp" />
+
+        <RadioButton
+            android:id="@+id/signup_pg_radio_btn_radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Female"
+            android:textColor="@color/black"
+            android:paddingRight="10dp"
+            tools:layout_editor_absoluteX="199dp"
+            tools:layout_editor_absoluteY="486dp" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/signup_pg_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I accept all the terms and rules"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintStart_toStartOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintTop_toBottomOf="@+id/signup_pg_radio_btn"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/signup_pg_terms_and_rules_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms and rules"
+        android:textColor="@color/purple_900"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="@id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="@id/signup_pg_signup_panel"
+        app:layout_constraintTop_toBottomOf="@id/signup_pg_checkBox"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <Button
+        android:id="@+id/signup_pg_signup_reg_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_signup_btn"
+        android:text="Signup"
+        app:layout_constraintBottom_toBottomOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintEnd_toEndOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toStartOf="@+id/signup_pg_signup_panel"
+        app:layout_constraintTop_toBottomOf="@+id/signup_pg_radio_btn"
+        app:layout_constraintVertical_bias="0.531" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

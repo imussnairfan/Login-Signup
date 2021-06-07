@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white_100">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/login_pg_login_txt_panel"
+        />
+
+    <ImageView
+        android:id="@+id/login_pg_login_png"
+        android:layout_width="383dp"
+        android:layout_height="605dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        android:background="@drawable/login_pg_login_txt_panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.793"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/login_pg_login_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="55dp"
+        android:textStyle="bold"
+        android:onClick="fun_login_pg_login_txt"
+        app:layout_constraintBottom_toTopOf="@+id/login_pg_login_panel"
+        app:layout_constraintEnd_toEndOf="@id/login_pg_login_png"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/login_pg_login_png"
+        app:layout_constraintVertical_bias="0.779"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/login_pg_signup_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:onClick="fun_login_pg_signup_txt"
+        app:layout_constraintBottom_toTopOf="@+id/login_pg_login_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/login_pg_login_panel"
+        android:layout_width="341dp"
+        android:layout_height="492dp"
+        android:background="@drawable/panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/login_pg_email_panel"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="72dp"
+        android:hint=" Email or username"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/account_icon"
+        android:drawableLeft="@drawable/account_icon"
+        android:background="@drawable/login_signup_ed_text_des"
+        android:paddingLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/login_pg_login_panel"
+        app:layout_constraintEnd_toEndOf="@+id/login_pg_login_panel"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/login_pg_login_panel"
+        app:layout_constraintTop_toTopOf="@+id/login_pg_login_panel"
+        app:layout_constraintVertical_bias="0.0"/>
+
+
+    <EditText
+        android:id="@+id/login_pg_pass_panel"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:hint=" Password"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/lock_icon"
+        android:drawableLeft="@drawable/lock_icon"
+        android:background="@drawable/login_signup_ed_text_des"
+        android:paddingLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/login_pg_login_panel"
+        app:layout_constraintEnd_toEndOf="@+id/login_pg_login_panel"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/login_pg_login_panel"
+        app:layout_constraintTop_toBottomOf="@+id/login_pg_email_panel"
+        app:layout_constraintVertical_bias="0.080" />
+
+    <TextView
+        android:id="@+id/login_pg_forget_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget Password?"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/login_pg_login_panel"
+        app:layout_constraintEnd_toEndOf="@id/login_pg_login_panel"
+        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintStart_toStartOf="@id/login_pg_login_panel"
+        app:layout_constraintTop_toBottomOf="@id/login_pg_pass_panel"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <CheckBox
+        android:id="@+id/login_pg_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember Me"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/login_pg_login_panel"
+        app:layout_constraintEnd_toEndOf="@+id/login_pg_login_panel"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="@+id/login_pg_login_panel"
+        app:layout_constraintTop_toBottomOf="@+id/login_pg_forget_txt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/login_pg_login_reg_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_signup_btn"
+        android:text="Login"
+        android:onClick="login"
+        app:layout_constraintBottom_toBottomOf="@+id/login_pg_login_panel"
+        app:layout_constraintEnd_toEndOf="@+id/login_pg_login_panel"
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="@+id/login_pg_login_panel"
+        app:layout_constraintTop_toBottomOf="@+id/login_pg_forget_txt"
+        app:layout_constraintVertical_bias="0.215" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
